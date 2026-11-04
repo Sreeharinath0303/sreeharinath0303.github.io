@@ -254,9 +254,10 @@ function initMainSite() {
 
   /* — Typed text — */
   const roles = [
-    'B.E. ECE Developer',
-    'Websites with Java',
-    'Prompt Engineering',
+    'B.E. ECE',
+    'Website Developer',
+    'Java Developer',
+    'Prompt Engineer',
     'MERN & MongoDB',
     'IoT Solutions',
     'DSA in Java',
