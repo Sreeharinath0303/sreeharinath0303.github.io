@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Sree Harinath K — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Fira+Code:wght@400;500&family=Bebas+Neue&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════
+       CINEMATIC INTRO SEQUENCE
+  ════════════════════════════════ -->
+  <div id="cinematic-intro" class="cinematic-intro">
+    <canvas id="introCanvas"></canvas>
+    <div class="film-grain"></div>
+    <div class="letterbox top"></div>
+    <div class="letterbox bottom"></div>
+    <div class="intro-content">
+      <div class="intro-photo-container">
+        <div class="ipc-ring ipc-r1"></div>
+        <div class="ipc-ring ipc-r2"></div>
+        <div class="ipc-avatar">
+          <img src="profile-cinematic.jpg" alt="Sree Harinath K" class="ipc-img" />
+          <div class="ipc-vignette"></div>
+        </div>
+        <div class="ipc-flare"></div>
+      </div>
+
+      <p class="intro-label">A PORTFOLIO BY</p>
+      <h1 class="intro-name">
+        <span class="in-word">SREE</span>
+        <span class="in-word">HARINATH</span>
+        <span class="in-word highlight-gold">K</span>
+      </h1>
+      <p class="intro-role"><span class="intro-degree-badge">B.E. ECE</span> &nbsp;·&nbsp; WEBSITE DEVELOPER &nbsp;·&nbsp; JAVA &nbsp;·&nbsp; PROMPT ENGINEER</p>
+      <div class="intro-line"></div>
+      <p class="intro-skip" id="introSkip">PRESS ANY KEY TO CONTINUE ▸</p>
+    </div>
+    <div class="intro-corner tl">SHK</div>
+    <div class="intro-corner tr">2026</div>
+    <div class="intro-corner bl">TRICHY, INDIA</div>
+    <div class="intro-corner br">01 / 06</div>
+    <div class="intro-scanline"></div>
+  </div>
+
+  <!-- ═══════════════════════════════
+       MAIN SITE
+  ════════════════════════════════ -->
+  <div id="mainSite" class="main-site hidden">
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cur-dot" id="curDot"></div>
+    <div class="cur-ring" id="curRing"></div>
+    <div class="cur-trail-wrap" id="curTrail"></div>
+
+    <!-- FILM GRAIN OVERLAY -->
+    <div class="grain-overlay"></div>
+
+    <!-- AMBIENT LIGHTING -->
+    <div class="ambient-light" id="ambientLight"></div>
+
+    <!-- SCENE PROGRESS (side) -->
+    <div class="scene-nav" id="sceneNav">
+      <div class="sn-line"></div>
+      <div class="scene-items">
+        <a href="#hero" class="scene-item active" data-label="Intro"><span></span></a>
+        <a href="#about" class="scene-item" data-label="About"><span></span></a>
+        <a href="#skills" class="scene-item" data-label="Skills"><span></span></a>
+        <a href="#projects" class="scene-item" data-label="Projects"><span></span></a>
+        <a href="#achievements" class="scene-item" data-label="Awards"><span></span></a>
+        <a href="#contact" class="scene-item" data-label="Contact"><span></span></a>
+      </div>
+    </div>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <div class="nav-logo">
+          <span class="nl-bracket">&lt;</span><span class="nl-name">Hari</span><span class="nl-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#achievements" class="nav-link">Awards</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </nav>
+
+    <!-- ══════════════════
+         SCENE 01 — HERO
+    ═══════════════════ -->
+    <section id="hero" class="scene scene-hero">
+      <canvas id="starCanvas"></canvas>
+      <div class="nebula-bg"></div>
+      <div class="scene-chapter">SCENE 01 / INTRODUCTION</div>
+
+      <div class="hero-wrap">
+        <div class="hero-left">
+          <div class="hero-eyebrow cin-reveal">
+            <span class="dot-pulse"></span>
+            <span>Available for Opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="ht-line cin-line" data-delay="0.1">
+              <span class="ht-word" data-word="Sree">Sree</span>
+            </span>
+            <span class="ht-line cin-line" data-delay="0.25">
+              <span class="ht-word" data-word="Harinath">Harinath</span>
+            </span>
+            <span class="ht-line cin-line gold-line" data-delay="0.4">
+              <span class="ht-word" data-word="K">K</span>
+              <span class="ht-degree"><i class="fas fa-graduation-cap"></i> B.E. ECE</span>
+            </span>
+          </h1>
+
+          <div class="hero-role cin-reveal" style="--d:0.65s">
+            <span class="role-text" id="typed"></span><span class="role-cursor">|</span>
+          </div>
+
+          <p class="hero-bio cin-reveal" style="--d:0.8s">
+            Crafting scalable digital experiences with <em>Java</em>,
+            <em>MERN Stack</em>, <em>MongoDB</em> & <em>Prompt Engineering</em>. I turn ideas into
+            production-ready products that actually ship. 🚀
+          </p>
+
+          <div class="hero-btns cin-reveal" style="--d:1s">
+            <a href="#projects" class="btn-cin primary mag-btn">
+              <span class="btn-glow"></span>
+              <i class="fas fa-rocket"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="#contact" class="btn-cin outline mag-btn">
+              <i class="fas fa-paper-plane"></i>
+              <span>Let's Talk</span>
+            </a>
+          </div>
+
+          <div class="hero-tech-strip cin-reveal" style="--d:1.15s">
+            <div class="hts-item">
+              <i class="fas fa-terminal"></i>
+              <div>
+                <span>CORE COMPETENCY</span>
+                <strong>Java · DSA · MERN · Prompt Eng.</strong>
+              </div>
+            </div>
+            <div class="hts-item">
+              <i class="fas fa-globe-americas"></i>
+              <div>
+                <span>LOCATION & WORK</span>
+                <strong>Trichy, India · Open for Remote</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-links cin-reveal" style="--d:1.25s">
+            <a href="mailto:rkumar0151966@gmail.com" class="hlink" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="hlink" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="hlink" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="tel:+916379796639" class="hlink" title="Phone"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- Floating Ambient Badges -->
+          <div class="hero-float-chip chip-left">
+            <i class="fas fa-bolt"></i>
+            <span>Scalable Systems</span>
+          </div>
+          <div class="hero-float-chip chip-right">
+            <i class="fas fa-shield-alt"></i>
+            <span>Clean Code & DSA</span>
+          </div>
+
+          <div class="avatar-cinema" id="avatarCinema">
+            <!-- Rings -->
+            <div class="ac-ring r1"></div>
+            <div class="ac-ring r2"></div>
+            <div class="ac-ring r3"></div>
+            <!-- Core -->
+            <div class="ac-core">
+              <img src="profile-cinematic.jpg" alt="Sree Harinath K" class="ac-photo" />
+              <div class="ac-vignette"></div>
+              <div class="ac-glow-pulse"></div>
+            </div>
+            <!-- Orbiting tech -->
+            <div class="orbit-wrap ow1">
+              <div class="orbit-pill"><i class="fab fa-java"></i><span>Java</span></div>
+            </div>
+            <div class="orbit-wrap ow2">
+              <div class="orbit-pill"><i class="fas fa-database"></i><span>SQL</span></div>
+            </div>
+            <div class="orbit-wrap ow3">
+              <div class="orbit-pill"><i class="fab fa-react"></i><span>React</span></div>
+            </div>
+            <div class="orbit-wrap ow4">
+              <div class="orbit-pill"><i class="fas fa-sitemap"></i><span>DSA</span></div>
+            </div>
+            <!-- Flares -->
+            <div class="flare f1"></div>
+            <div class="flare f2"></div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hstat">
+              <span class="hstat-n" data-to="6">0</span><sup>+</sup>
+              <span class="hstat-l">Projects</span>
+            </div>
+            <div class="hstat-sep"></div>
+            <div class="hstat">
+              <span class="hstat-n" data-to="4">0</span><sup>+</sup>
+              <span class="hstat-l">Awards</span>
+            </div>
+            <div class="hstat-sep"></div>
+            <div class="hstat">
+              <span class="hstat-n" data-to="10">0</span><sup>+</sup>
+              <span class="hstat-l">Skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue">
+        <div class="sc-bar"></div>
+        <span>SCROLL TO EXPLORE</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════
+         SCENE 02 — ABOUT
+    ═══════════════════ -->
+    <section id="about" class="scene scene-about">
+      <div class="scene-chapter">SCENE 02 / ABOUT ME</div>
+      <div class="scene-bg-word">ABOUT</div>
+
+      <div class="container">
+        <div class="sec-head">
+          <div class="sec-line"></div>
+          <span class="sec-tag">Get To Know Me</span>
+        </div>
+
+        <div class="about-cinema">
+          <div class="ac-left">
+            <div class="profile-card-cin cin-left">
+              <div class="pcc-bg"></div>
+              <div class="pcc-avatar-wrap">
+                <img src="profile-cinematic.jpg" alt="Sree Harinath K" class="pcc-photo" />
+                <div class="pcc-avatar-glow"></div>
+              </div>
+              <div class="pcc-name">Sree Harinath K <span class="pcc-degree">B.E. ECE</span></div>
+              <div class="pcc-role">Website Developer</div>
+              <div class="pcc-divider"></div>
+              <div class="pcc-rows">
+                <div class="pcc-row"><i class="fas fa-map-marker-alt"></i>Trichy, Tamil Nadu</div>
+                <div class="pcc-row"><i class="fas fa-envelope"></i>rkumar0151966@gmail.com</div>
+                <div class="pcc-row"><i class="fas fa-phone"></i>+91 6379796639</div>
+                <div class="pcc-row"><i class="fas fa-language"></i>English & Tamil</div>
+                <div class="pcc-row available"><i class="fas fa-circle"></i>Open to Work</div>
+              </div>
+              <a href="#" class="btn-cin primary" style="margin-top:16px;width:100%;justify-content:center;">
+                <i class="fas fa-download"></i><span>Download CV</span>
+              </a>
+            </div>
+
+            <div class="about-mini-cards">
+              <div class="amc cin-up" style="--d:0.1s"><span class="amc-n">6+</span><span class="amc-l">Projects</span>
+              </div>
+              <div class="amc cin-up" style="--d:0.2s"><span class="amc-n">4+</span><span class="amc-l">Awards</span>
+              </div>
+              <div class="amc cin-up" style="--d:0.3s"><span class="amc-n">3+</span><span class="amc-l">Certs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ac-right cin-right">
+            <h2 class="about-headline">
+              Building <span class="highlight-gold">Digital</span><br />
+              Experiences That <span class="highlight-cyan">Matter</span>
+            </h2>
+            <p class="about-para">I'm <strong>Sree Harinath K</strong> — a dedicated Website Developer who lives at the
+              intersection of elegant code and real-world impact. With strong expertise in Java and MERN Stack, I build
+              full-stack systems that solve genuine problems.</p>
+            <p class="about-para">From winning national-level technical competitions to deploying IoT systems with
+              Raspberry Pi and Arduino — I combine deep technical knowledge with a drive to ship products people
+              actually use.</p>
+
+            <div class="highlight-pills">
+              <span class="hpill"><i class="fab fa-java"></i> Java</span>
+              <span class="hpill"><i class="fas fa-sitemap"></i> DSA</span>
+              <span class="hpill"><i class="fas fa-plug"></i> JDBC</span>
+              <span class="hpill"><i class="fas fa-layer-group"></i> MERN</span>
+              <span class="hpill"><i class="fas fa-database"></i> SQL</span>
+              <span class="hpill"><i class="fas fa-leaf"></i> MongoDB</span>
+              <span class="hpill"><i class="fas fa-robot"></i> Prompt Engineering</span>
+              <span class="hpill"><i class="fas fa-microchip"></i> IoT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════
+         SCENE 03 — SKILLS
+    ═══════════════════ -->
+    <section id="skills" class="scene scene-skills">
+      <div class="scene-chapter">SCENE 03 / SKILLS</div>
+      <div class="scene-bg-word">SKILLS</div>
+
+      <div class="container">
+        <div class="sec-head">
+          <div class="sec-line"></div>
+          <span class="sec-tag">What I Know</span>
+        </div>
+
+        <div class="skills-cinema">
+          <!-- Left: big skills bars -->
+          <div class="skills-left cin-left">
+            <h3 class="skills-subhead">Technical Proficiency</h3>
+            <div class="cskills-list">
+              <div class="csk-item" data-pct="88">
+                <div class="csk-top"><span><i class="fab fa-java"></i> Java</span><span>88%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:88%;--c:#f59e0b,#d97706"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="85">
+                <div class="csk-top"><span><i class="fas fa-robot"></i> Prompt Engineering</span><span>85%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:85%;--c:#06b6d4,#f59e0b"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="82">
+                <div class="csk-top"><span><i class="fas fa-sitemap"></i> DSA</span><span>82%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:82%;--c:#8b5cf6,#7c3aed"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="80">
+                <div class="csk-top"><span><i class="fas fa-database"></i> SQL</span><span>80%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:80%;--c:#06b6d4,#0891b2"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="78">
+                <div class="csk-top"><span><i class="fas fa-leaf"></i> MongoDB</span><span>78%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:78%;--c:#10b981,#059669"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="78">
+                <div class="csk-top"><span><i class="fas fa-plug"></i> JDBC</span><span>78%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:78%;--c:#10b981,#059669"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="82">
+                <div class="csk-top"><span><i class="fab fa-js-square"></i> JavaScript</span><span>82%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:82%;--c:#fbbf24,#f59e0b"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="78">
+                <div class="csk-top"><span><i class="fab fa-react"></i> React.js</span><span>78%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:78%;--c:#06b6d4,#8b5cf6"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="76">
+                <div class="csk-top"><span><i class="fab fa-node-js"></i> Node.js</span><span>76%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:76%;--c:#10b981,#06b6d4"></div>
+                </div>
+              </div>
+              <div class="csk-item" data-pct="75">
+                <div class="csk-top"><span><i class="fas fa-code"></i> C Language</span><span>75%</span></div>
+                <div class="csk-bar">
+                  <div class="csk-fill" style="--w:75%;--c:#ec4899,#8b5cf6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Hexagonal tools + soft -->
+          <div class="skills-right cin-right">
+            <h3 class="skills-subhead">Tools & Frameworks</h3>
+            <div class="hex-grid">
+              <div class="hex-cell"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+              <div class="hex-cell"><i class="fas fa-robot"></i><span>Prompt Eng.</span></div>
+              <div class="hex-cell"><i class="fab fa-java"></i><span>Spring Boot</span></div>
+              <div class="hex-cell"><i class="fas fa-database"></i><span>MySQL</span></div>
+              <div class="hex-cell"><i class="fab fa-git-alt"></i><span>Git</span></div>
+              <div class="hex-cell"><i class="fas fa-microchip"></i><span>Arduino</span></div>
+              <div class="hex-cell"><i class="fab fa-react"></i><span>MERN</span></div>
+              <div class="hex-cell"><i class="fas fa-infinity"></i><span>MATLAB</span></div>
+              <div class="hex-cell"><i class="fas fa-code"></i><span>VS Code</span></div>
+              <div class="hex-cell"><i class="fab fa-node-js"></i><span>Express</span></div>
+              <div class="hex-cell"><i class="fas fa-network-wired"></i><span>REST APIs</span></div>
+              <div class="hex-cell"><i class="fas fa-raspberry-pi"></i><span>Raspberry Pi</span></div>
+            </div>
+
+            <h3 class="skills-subhead" style="margin-top:40px">Soft Skills</h3>
+            <div class="soft-cin-row">
+              <div class="soft-cin-pill"><i class="fas fa-ear-listen"></i> Active Listener</div>
+              <div class="soft-cin-pill"><i class="fas fa-sync-alt"></i> Adaptability</div>
+              <div class="soft-cin-pill"><i class="fas fa-users"></i> Team Work</div>
+              <div class="soft-cin-pill"><i class="fas fa-clock"></i> Time Leadership</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════
+         SCENE 04 — PROJECTS
+    ═══════════════════ -->
+    <section id="projects" class="scene scene-projects">
+      <div class="scene-chapter">SCENE 04 / PROJECTS</div>
+      <div class="scene-bg-word">WORK</div>
+
+      <div class="container">
+        <div class="sec-head">
+          <div class="sec-line"></div>
+          <span class="sec-tag">Featured Projects</span>
+        </div>
+
+        <div class="proj-filter">
+          <button class="pf-btn active" data-f="all">All</button>
+          <button class="pf-btn" data-f="web">Web</button>
+          <button class="pf-btn" data-f="iot">IoT</button>
+          <button class="pf-btn" data-f="business">Business</button>
+        </div>
+
+        <div class="proj-cinema-grid" id="projGrid">
+          <div class="pcg-card" data-cat="web" data-project="phone-repair">
+            <div class="pcg-num">01</div>
+            <div class="pcg-emoji">📱</div>
+            <div class="pcg-tags"><span>Java</span><span>Web</span><span>Service</span></div>
+            <h3>Phone Repair Portal</h3>
+            <p>Streamlined platform for service tracking and customer booking, significantly improving operational
+              workflow.</p>
+            <div class="pcg-3d-deck">
+              <div class="p3d-scan-beam"></div>
+              <div class="p3d-left">
+                <div class="p3d-cube-icon"><i class="fas fa-cube"></i></div>
+                <div class="p3d-text">
+                  <span class="p3d-sub">ARCHITECTURE & WORKFLOW</span>
+                  <strong class="p3d-main">OPEN PROJECT VAULT</strong>
+                </div>
+              </div>
+              <div class="p3d-trigger">
+                <span>OPEN</span>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="pcg-links">
+              <a href="#" class="pcg-link outline" title="View Source Code"><i class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="pcg-hover-line"></div>
+          </div>
+
+          <div class="pcg-card featured-cin" data-cat="web" data-project="crm-lms">
+            <div class="pcg-feat-badge">⭐ Featured</div>
+            <div class="pcg-num">02</div>
+            <div class="pcg-emoji">🏢</div>
+            <div class="pcg-tags"><span>MERN</span><span>CRM</span><span>LMS</span></div>
+            <h3>CRM & LMS Suite</h3>
+            <p>Integrated Customer Relationship + Learning Management System for optimized user data management and
+              course delivery.</p>
+            <div class="pcg-3d-deck">
+              <div class="p3d-scan-beam"></div>
+              <div class="p3d-left">
+                <div class="p3d-cube-icon"><i class="fas fa-cube"></i></div>
+                <div class="p3d-text">
+                  <span class="p3d-sub">ARCHITECTURE & WORKFLOW</span>
+                  <strong class="p3d-main">OPEN PROJECT VAULT</strong>
+                </div>
+              </div>
+              <div class="p3d-trigger">
+                <span>OPEN</span>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="pcg-links">
+              <a href="#" class="pcg-link outline" title="View Source Code"><i class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="pcg-hover-line"></div>
+          </div>
+
+          <div class="pcg-card" data-cat="web" data-project="lingua">
+            <div class="pcg-num">03</div>
+            <div class="pcg-emoji">🌐</div>
+            <div class="pcg-tags"><span>React</span><span>UI/UX</span><span>Responsive</span></div>
+            <h3>Lingua Circle Platform</h3>
+            <p>Fully responsive language-learning interface with intuitive UX/UI design and smooth user interactions.
+            </p>
+            <div class="pcg-3d-deck">
+              <div class="p3d-scan-beam"></div>
+              <div class="p3d-left">
+                <div class="p3d-cube-icon"><i class="fas fa-cube"></i></div>
+                <div class="p3d-text">
+                  <span class="p3d-sub">ARCHITECTURE & WORKFLOW</span>
+                  <strong class="p3d-main">OPEN PROJECT VAULT</strong>
+                </div>
+              </div>
+              <div class="p3d-trigger">
+                <span>OPEN</span>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="pcg-links">
+              <a href="#" class="pcg-link outline" title="View Source Code"><i class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="pcg-hover-line"></div>
+          </div>
+
+          <div class="pcg-card" data-cat="business" data-project="kulur">
+            <div class="pcg-num">04</div>
+            <div class="pcg-emoji">📈</div>
+            <div class="pcg-tags"><span>Business</span><span>Strategy</span></div>
+            <h3>Kulur Project</h3>
+            <p>Led business development initiatives applying strategic thinking and market analysis to drive growth
+              outcomes.</p>
+            <div class="pcg-3d-deck">
+              <div class="p3d-scan-beam"></div>
+              <div class="p3d-left">
+                <div class="p3d-cube-icon"><i class="fas fa-cube"></i></div>
+                <div class="p3d-text">
+                  <span class="p3d-sub">STRATEGY & PIPELINE</span>
+                  <strong class="p3d-main">OPEN PROJECT VAULT</strong>
+                </div>
+              </div>
+              <div class="p3d-trigger">
+                <span>OPEN</span>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="pcg-links">
+              <a href="#" class="pcg-link outline" title="Project Details"><i class="fas fa-chart-line"></i> Strategic
+                Growth</a>
+            </div>
+            <div class="pcg-hover-line"></div>
+          </div>
+
+          <div class="pcg-card" data-cat="iot" data-project="braille">
+            <div class="pcg-num">05</div>
+            <div class="pcg-emoji">⌨️</div>
+            <div class="pcg-tags"><span>Raspberry Pi</span><span>IoT</span><span>Accessibility</span></div>
+            <h3>Braille Keyboard</h3>
+            <p>Assistive Braille keyboard using Raspberry Pi to empower visually impaired users with accessible digital
+              communication.</p>
+            <div class="pcg-3d-deck">
+              <div class="p3d-scan-beam"></div>
+              <div class="p3d-left">
+                <div class="p3d-cube-icon"><i class="fas fa-cube"></i></div>
+                <div class="p3d-text">
+                  <span class="p3d-sub">HARDWARE & GPIO FLOW</span>
+                  <strong class="p3d-main">OPEN PROJECT VAULT</strong>
+                </div>
+              </div>
+              <div class="p3d-trigger">
+                <span>OPEN</span>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="pcg-links">
+              <a href="#" class="pcg-link outline" title="View Source Code"><i class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="pcg-hover-line"></div>
+          </div>
+
+          <div class="pcg-card" data-cat="iot" data-project="bike-parking">
+            <div class="pcg-num">06</div>
+            <div class="pcg-emoji">🏍️</div>
+            <div class="pcg-tags"><span>Arduino</span><span>IoT</span><span>Automation</span></div>
+            <h3>Bike Parking System</h3>
+            <p>Automated bike parking management with sensor-based slot detection and real-time status display using
+              Arduino.</p>
+            <div class="pcg-3d-deck">
+              <div class="p3d-scan-beam"></div>
+              <div class="p3d-left">
+                <div class="p3d-cube-icon"><i class="fas fa-cube"></i></div>
+                <div class="p3d-text">
+                  <span class="p3d-sub">SENSOR & EMBEDDED FLOW</span>
+                  <strong class="p3d-main">OPEN PROJECT VAULT</strong>
+                </div>
+              </div>
+              <div class="p3d-trigger">
+                <span>OPEN</span>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="pcg-links">
+              <a href="#" class="pcg-link outline" title="View Source Code"><i class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="pcg-hover-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════
+         SCENE 05 — ACHIEVEMENTS
+    ═══════════════════ -->
+    <section id="achievements" class="scene scene-ach">
+      <div class="scene-chapter">SCENE 05 / ACHIEVEMENTS</div>
+      <div class="scene-bg-word">AWARDS</div>
+
+      <div class="container">
+        <div class="sec-head">
+          <div class="sec-line"></div>
+          <span class="sec-tag">Achievements & Experience</span>
+        </div>
+
+        <!-- Awards — Cinematic cards -->
+        <div class="ach-awards">
+          <div class="award-cin gold cin-up" style="--d:0.0s">
+            <div class="aw-shine"></div>
+            <div class="aw-top"><span class="aw-medal">🥇</span><span class="aw-place">1st Prize</span></div>
+            <h3>Paper Presentation</h3>
+            <p>National Level Technical Symposium — Technical Excellence</p>
+            <div class="aw-bar"></div>
+          </div>
+          <div class="award-cin silver cin-up" style="--d:0.1s">
+            <div class="aw-shine"></div>
+            <div class="aw-top"><span class="aw-medal">🥈</span><span class="aw-place">2nd Prize</span></div>
+            <h3>Quizathon</h3>
+            <p>National Level Technical Symposium — Against top talent</p>
+            <div class="aw-bar"></div>
+          </div>
+          <div class="award-cin silver cin-up" style="--d:0.2s">
+            <div class="aw-shine"></div>
+            <div class="aw-top"><span class="aw-medal">🥈</span><span class="aw-place">2nd Prize</span></div>
+            <h3>Hunt-o-Mania</h3>
+            <p>Recognized for ECE technical problem-solving skills</p>
+            <div class="aw-bar"></div>
+          </div>
+          <div class="award-cin bronze cin-up" style="--d:0.3s">
+            <div class="aw-shine"></div>
+            <div class="aw-top"><span class="aw-medal">🥉</span><span class="aw-place">3rd Prize</span></div>
+            <h3>IGNIECET</h3>
+            <p>K Ramakrishnan College of Technology (KRCT)</p>
+            <div class="aw-bar"></div>
+          </div>
+        </div>
+
+        <!-- Certifications + Experience row -->
+        <div class="ach-bottom-row">
+          <div class="cert-cin-card cin-left">
+            <h3 class="ach-sub"><i class="fas fa-certificate"></i> Certifications</h3>
+            <div class="cert-cin-item">
+              <div class="cci-icon"><i class="fas fa-robot"></i></div>
+              <div>
+                <strong>Prompt Engineering</strong>
+                <span>Generative AI & LLM Prompting Specialization</span>
+                <div class="cci-badge">Certified ✓</div>
+              </div>
+            </div>
+            <div class="cert-cin-item">
+              <div class="cci-icon"><i class="fas fa-brain"></i></div>
+              <div>
+                <strong>Artificial Intelligence</strong>
+                <span>Foundational Certification Course</span>
+                <div class="cci-badge">Certified ✓</div>
+              </div>
+            </div>
+            <div class="cert-cin-item">
+              <div class="cci-icon"><i class="fas fa-infinity"></i></div>
+              <div>
+                <strong>MATLAB Onramp</strong>
+                <span>MathWorks — Proficiency Certified</span>
+                <div class="cci-badge">Certified ✓</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-cin-card cin-right">
+            <h3 class="ach-sub"><i class="fas fa-briefcase"></i> Experience</h3>
+            <div class="exp-cin-entry">
+              <div class="ece-dot"></div>
+              <div class="ece-content">
+                <span class="ece-year">Recent</span>
+                <h4>Website Developer (Java)</h4>
+                <p>End-to-end full-stack development — Java backends, MERN frontends, SQL databases, and responsive UI
+                  platforms for real clients.</p>
+                <div class="ece-tags">
+                  <span>Java</span><span>MERN</span><span>JDBC</span><span>SQL</span><span>DSA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════
+         SCENE 06 — CONTACT
+    ═══════════════════ -->
+    <section id="contact" class="scene scene-contact">
+      <div class="scene-chapter">SCENE 06 / CONTACT</div>
+      <canvas id="contactCanvas"></canvas>
+
+      <div class="container">
+        <div class="contact-cinema">
+          <div class="cc-left cin-left">
+            <div class="sec-head" style="text-align:left;">
+              <div class="sec-line" style="margin:0 0 8px;"></div>
+              <span class="sec-tag">Get In Touch</span>
+            </div>
+            <h2 class="contact-headline">
+              Let's Build Something<br />
+              <span class="highlight-gold">Extraordinary</span>
+            </h2>
+            <p class="contact-sub">I'm actively seeking new opportunities and exciting collaborations. If you have a
+              project, an idea, or just want to connect — reach out!</p>
+
+            <div class="contact-links">
+              <a href="mailto:rkumar0151966@gmail.com" class="cl-item">
+                <div class="cli-icon"><i class="fas fa-envelope"></i></div>
+                <div class="cli-text"><span>Email</span><strong>rkumar0151966@gmail.com</strong></div>
+                <i class="fas fa-arrow-right cli-arrow"></i>
+              </a>
+              <a href="tel:+916379796639" class="cl-item">
+                <div class="cli-icon"><i class="fas fa-phone"></i></div>
+                <div class="cli-text"><span>Phone</span><strong>+91 6379796639</strong></div>
+                <i class="fas fa-arrow-right cli-arrow"></i>
+              </a>
+              <div class="cl-item">
+                <div class="cli-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="cli-text"><span>Location</span><strong>Trichy, Tamil Nadu 🇮🇳</strong></div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="mailto:rkumar0151966@gmail.com" class="csoc-btn"><i class="fas fa-envelope"></i></a>
+              <a href="#" class="csoc-btn"><i class="fab fa-github"></i></a>
+              <a href="#" class="csoc-btn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="cc-right cin-right">
+            <form id="contactForm" class="form-cinema">
+              <div class="fc-row">
+                <div class="fc-field">
+                  <input type="text" placeholder=" " required id="fcName" />
+                  <label for="fcName">Your Name</label>
+                  <div class="fc-underline"></div>
+                </div>
+                <div class="fc-field">
+                  <input type="email" placeholder=" " required id="fcEmail" />
+                  <label for="fcEmail">Email Address</label>
+                  <div class="fc-underline"></div>
+                </div>
+              </div>
+              <div class="fc-field">
+                <input type="text" placeholder=" " required id="fcSubj" />
+                <label for="fcSubj">Subject</label>
+                <div class="fc-underline"></div>
+              </div>
+              <div class="fc-field">
+                <textarea rows="5" placeholder=" " required id="fcMsg"></textarea>
+                <label for="fcMsg">Your Message</label>
+                <div class="fc-underline"></div>
+              </div>
+              <button type="submit" class="btn-cin primary submit-cin">
+                <span class="btn-glow"></span>
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════
+         CINEMATIC PROJECT GATE / VAULT MODAL
+    ════════════════════════════════ -->
+    <div id="projectVault" class="vault-modal" aria-hidden="true">
+      <div class="vault-backdrop" id="vaultBackdrop"></div>
+
+      <!-- GATE DOORS -->
+      <div class="vault-doors-wrapper" id="vaultDoors">
+        <div class="vault-door door-left">
+          <div class="vd-panel">
+            <div class="vd-stripes"></div>
+            <div class="vd-label">
+              <span class="vdl-sec">SECURITY LEVEL 01</span>
+              <span class="vdl-title">PROJECT ARCHIVE // ALPHA</span>
+            </div>
+            <div class="vd-hydraulic">
+              <div class="vd-piston"></div>
+              <div class="vd-piston"></div>
+            </div>
+            <div class="vd-teeth"></div>
+          </div>
+        </div>
+
+        <div class="vault-door door-right">
+          <div class="vd-panel">
+            <div class="vd-stripes"></div>
+            <div class="vd-label">
+              <span class="vdl-sec">SYSTEM STATUS: UNLOCKED</span>
+              <span class="vdl-title">ARCHITECTURE CORE // BETA</span>
+            </div>
+            <div class="vd-hydraulic">
+              <div class="vd-piston"></div>
+              <div class="vd-piston"></div>
+            </div>
+            <div class="vd-teeth right"></div>
+          </div>
+        </div>
+
+        <!-- Center Locking Dial & Seam Flare -->
+        <div class="vault-lock-core" id="vaultLockCore">
+          <div class="vlc-ring"></div>
+          <div class="vlc-dial"><i class="fas fa-lock"></i></div>
+        </div>
+        <div class="vault-seam-flare" id="vaultFlare"></div>
+      </div>
+
+      <!-- REVEALED CONTENT (Inside the Gate) -->
+      <div class="vault-content-container" id="vaultContentContainer">
+        <div class="vault-header-bar">
+          <div class="vh-badge" id="vProjectBadge">FULL STACK WEB</div>
+          <button type="button" class="vault-close-btn" id="vaultCloseBtn" title="Close Gate (Esc)">
+            <span>CLOSE VAULT</span>
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="vault-scrollable-content">
+          <!-- Title & Meta -->
+          <div class="vault-title-section">
+            <div class="vts-icon" id="vProjectIcon">📱</div>
+            <div>
+              <h2 class="vts-title" id="vProjectTitle">Phone Repair Portal</h2>
+              <p class="vts-tagline" id="vProjectTagline">Service tracking & customer booking enterprise system</p>
+            </div>
+          </div>
+
+          <!-- Main Grid -->
+          <div class="vault-body-grid">
+            <!-- Left: What I Did & Tech Stack -->
+            <div class="vb-col">
+              <!-- What I Did -->
+              <div class="vault-card vc-contribution">
+                <div class="vc-card-title">
+                  <i class="fas fa-laptop-code"></i>
+                  <span>WHAT I DID & ENGINEERING WORK</span>
+                </div>
+                <ul class="vc-checklist" id="vProjectChecklist">
+                  <!-- Populated by JS -->
+                </ul>
+              </div>
+
+              <!-- Tech Stack & Metrics -->
+              <div class="vault-card vc-tech">
+                <div class="vc-card-title">
+                  <i class="fas fa-layer-group"></i>
+                  <span>TECHNOLOGIES & TOOLS</span>
+                </div>
+                <div class="vtech-pills" id="vProjectTech">
+                  <!-- Populated by JS -->
+                </div>
+              </div>
+
+              <!-- Impact & Highlights -->
+              <div class="vault-card vc-impact">
+                <div class="vc-card-title">
+                  <i class="fas fa-chart-line"></i>
+                  <span>KEY RESULTS & IMPACT</span>
+                </div>
+                <div class="vimpact-row" id="vProjectImpact">
+                  <!-- Populated by JS -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Flow of the Project -->
+            <div class="vb-col">
+              <div class="vault-card vc-workflow">
+                <div class="vc-card-title">
+                  <i class="fas fa-project-diagram"></i>
+                  <span>PROJECT ARCHITECTURE & WORKFLOW</span>
+                </div>
+                <p class="vc-subtitle">Visual step-by-step pipeline from input to delivery:</p>
+
+                <!-- Flowchart Steps -->
+                <div class="workflow-timeline" id="vWorkflowTimeline">
+                  <!-- Populated by JS -->
+                </div>
+
+                <!-- Actions -->
+                <div class="vault-actions-bar">
+                  <a href="#" class="btn-cin primary" id="vActionDemo"><i
+                      class="fas fa-external-link-alt"></i><span>Live Demo</span></a>
+                  <a href="#" class="btn-cin outline" id="vActionCode"><i class="fab fa-github"></i><span>Source
+                      Code</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-cin">
+      <div class="fc-inner">
+        <div class="fc-logo"><span>&lt;</span>Hari<span>/&gt;</span></div>
+        <p>Designed & directed with ❤️ by <strong>Sree Harinath K</strong></p>
+        <p class="fc-copy">© 2026 Sree Harinath K · All Rights Reserved</p>
+      </div>
+      <a href="#hero" class="btt-btn" id="bttBtn"><i class="fas fa-chevron-up"></i></a>
+    </footer>
+
+  </div><!-- /mainSite -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
