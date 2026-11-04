@@ -1713,6 +1713,7 @@ button{cursor:none;border:none;background:none;font-family:inherit;}
   .skills-cinema{grid-template-columns:1fr;gap:40px;}
   .ach-bottom-row{grid-template-columns:1fr;gap:24px;}
   .contact-cinema{grid-template-columns:1fr;gap:40px;}
+  .vault-body-grid{grid-template-columns:1fr;gap:24px;}
 }
 
 /* --- MOBILE DEVICES (<= 768px) --- */
@@ -1863,31 +1864,108 @@ button{cursor:none;border:none;background:none;font-family:inherit;}
     padding:28px 16px;
   }
   
-  /* Project Vault Gate Modal on Mobile */
+  /* Project Vault Gate Modal on Mobile (100% Fit & 1-Column) */
   .vault-content-container{
-    width:95%;
-    max-height:92vh;
-    border-radius:18px;
+    width:95% !important;
+    max-height:92vh !important;
+    border-radius:16px !important;
   }
-  .vault-header-bar{padding:12px 16px;}
-  .vault-scrollable-content{padding:16px;max-height:calc(92vh - 60px);}
-  .vault-title-section{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:20px;padding-bottom:16px;}
-  .vts-icon{width:56px;height:56px;font-size:2.2rem;border-radius:14px;}
-  .vts-title{font-size:1.5rem;}
-  .vts-tagline{font-size:0.82rem;}
-  .vault-card{padding:16px 14px;border-radius:14px;}
-  .vc-card-title{font-size:0.75rem;margin-bottom:12px;}
-  .vc-checklist li{font-size:0.8rem;line-height:1.6;}
-  .vimpact-row{grid-template-columns:1fr 1fr;gap:8px;}
-  .vib-num{font-size:1.3rem;}
-  .vib-desc{font-size:0.68rem;}
-  .workflow-timeline::before{left:15px;}
-  .wf-step{padding:10px 12px;gap:12px;}
-  .wf-node{width:30px;height:30px;font-size:0.85rem;}
-  .wf-title{font-size:0.82rem;}
-  .wf-desc{font-size:0.75rem;}
-  .vault-actions-bar{flex-direction:column;gap:8px;}
-  .vault-actions-bar .btn-cin{width:100%;justify-content:center;}
+  .vault-header-bar{
+    padding:10px 14px !important;
+    gap:8px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+  }
+  .vh-badge{
+    font-size:0.62rem !important;
+    letter-spacing:1px !important;
+    padding:4px 10px !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+    max-width:55% !important;
+  }
+  .vault-close-btn{
+    padding:6px 12px !important;
+    font-size:0.7rem !important;
+    gap:6px !important;
+    flex-shrink:0 !important;
+  }
+  .vault-scrollable-content{
+    padding:16px 14px !important;
+    max-height:calc(92vh - 56px) !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+  .vault-title-section{
+    flex-direction:row !important;
+    align-items:center !important;
+    gap:12px !important;
+    margin-bottom:16px !important;
+    padding-bottom:14px !important;
+  }
+  .vts-icon{
+    width:48px !important;
+    height:48px !important;
+    font-size:1.8rem !important;
+    border-radius:12px !important;
+    flex-shrink:0 !important;
+  }
+  .vts-title{
+    font-size:1.3rem !important;
+    line-height:1.2 !important;
+    margin-bottom:2px !important;
+  }
+  .vts-tagline{
+    font-size:0.78rem !important;
+    line-height:1.4 !important;
+  }
+  .vault-body-grid{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:18px !important;
+    width:100% !important;
+  }
+  .vb-col{
+    width:100% !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:18px !important;
+  }
+  .vault-card{
+    padding:16px 14px !important;
+    border-radius:14px !important;
+    width:100% !important;
+  }
+  .vc-card-title{
+    font-size:0.75rem !important;
+    letter-spacing:1.5px !important;
+    margin-bottom:12px !important;
+    gap:8px !important;
+  }
+  .vc-card-title i{font-size:0.85rem !important;}
+  .vc-subtitle{font-size:0.75rem !important;margin-bottom:14px !important;}
+  .vc-checklist{gap:10px !important;}
+  .vc-checklist li{
+    font-size:0.78rem !important;
+    line-height:1.6 !important;
+    gap:10px !important;
+  }
+  .vc-checklist li i{font-size:0.8rem !important;margin-top:3px !important;}
+  .vtech-pills{gap:6px !important;}
+  .vtech-pill{padding:4px 10px !important;font-size:0.7rem !important;}
+  .vimpact-row{grid-template-columns:1fr 1fr !important;gap:8px !important;}
+  .vib-num{font-size:1.3rem !important;}
+  .vib-desc{font-size:0.68rem !important;}
+  .workflow-timeline{margin-bottom:18px !important;gap:12px !important;}
+  .workflow-timeline::before{left:15px !important;top:15px !important;bottom:15px !important;}
+  .wf-step{padding:10px 12px !important;gap:12px !important;border-radius:10px !important;}
+  .wf-node{width:30px !important;height:30px !important;font-size:0.85rem !important;}
+  .wf-title{font-size:0.82rem !important;}
+  .wf-desc{font-size:0.75rem !important;line-height:1.5 !important;}
+  .vault-actions-bar{flex-direction:column !important;gap:8px !important;padding-top:12px !important;}
+  .vault-actions-bar .btn-cin{width:100% !important;justify-content:center !important;padding:10px 20px !important;}
 }
 
 /* --- SMALL PHONES (<= 400px) --- */
