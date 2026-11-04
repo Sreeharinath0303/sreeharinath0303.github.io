@@ -254,7 +254,6 @@ function initMainSite() {
 
   /* — Typed text — */
   const roles = [
-    'B.E. ECE',
     'Website Developer',
     'Java Developer',
     'Prompt Engineer',
