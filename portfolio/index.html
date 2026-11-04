@@ -3,13 +3,87 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0" />
   <title>Sree Harinath K — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=4.0" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Fira+Code:wght@400;500&family=Bebas+Neue&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Critical Mobile Vault Fit Guarantee */
+    @media (max-width: 900px) {
+      .vault-modal { padding: 12px 8px !important; }
+      .vault-content-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: 94vh !important;
+        border-radius: 16px !important;
+      }
+      .vault-header-bar {
+        padding: 10px 14px !important;
+        gap: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+      }
+      .vh-badge {
+        font-size: 0.60rem !important;
+        letter-spacing: 1px !important;
+        padding: 4px 10px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 58% !important;
+      }
+      .vault-close-btn {
+        padding: 6px 14px !important;
+        font-size: 0.70rem !important;
+        gap: 6px !important;
+        flex-shrink: 0 !important;
+      }
+      .vault-scrollable-content {
+        padding: 16px 12px !important;
+        max-height: calc(94vh - 54px) !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
+      .vault-body-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+      }
+      .vb-col {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+      .vault-card {
+        padding: 16px 14px !important;
+        border-radius: 14px !important;
+        width: 100% !important;
+      }
+      .vc-card-title {
+        font-size: 0.78rem !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 12px !important;
+      }
+      .vc-checklist li {
+        font-size: 0.82rem !important;
+        line-height: 1.6 !important;
+        gap: 8px !important;
+      }
+      .vimpact-row {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+      }
+      .workflow-timeline::before { left: 15px !important; }
+      .wf-step { padding: 10px 12px !important; gap: 12px !important; }
+      .wf-node { width: 30px !important; height: 30px !important; font-size: 0.85rem !important; }
+    }
+  </style>
 </head>
 
 <body>
@@ -927,7 +1001,7 @@
 
   </div><!-- /mainSite -->
 
-  <script src="script.js"></script>
+  <script src="script.js?v=4.0"></script>
 </body>
 
 </html>
